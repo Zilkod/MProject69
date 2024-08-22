@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '7'
+install:
+- npm install
+- npm run bootstrap
+deploy:
+  provider: npm
+  email: $NPM_USER
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
+    repo: superkhau/sandbox
